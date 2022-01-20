@@ -1,0 +1,31 @@
+{
+    "name": "high-five/wp-hyperdrive-admin-pages",
+    "description": "High Five's WordPress starter theme admin pages module.",
+    "authors": [
+        {
+            "name": "High Five",
+            "email": "hello@high-five.dev",
+            "homepage": "https://www.high-five.dev"
+        },
+        {
+            "name": "Harm Putman",
+            "email": "harm@high-five.dev",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "email": "support@high-five.dev"
+    },
+    "type": "library",
+    "license": "GPL-3.0-or-later",
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "require": {
+        "php": ">=7.4"
+    },
+    "autoload": {
+        "psr-4": {
+            "Hyperdrive\\AdminPages\\": "src/"
+        }
+    }
+}
