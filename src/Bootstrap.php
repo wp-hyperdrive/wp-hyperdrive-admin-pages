@@ -20,6 +20,17 @@ class Bootstrap implements Registerable
      */
     protected $subPages = [];
 
+    public function load(): void
+    {
+        add_filter(
+            'wp_hyperdrive_services',
+            function ($services) {
+                $services[] = self::class;
+                return $services;
+            }
+        );
+    }
+
     public function register(): void
     {
         add_action('admin_menu', [$this, 'init']);
