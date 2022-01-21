@@ -6,7 +6,7 @@ use Hyperdrive\AdminPages\Models\AdminPage;
 use Hyperdrive\AdminPages\Models\AdminSubPage;
 use Hyperdrive\Core\Interfaces\Registerable;
 
-defined('ABSPATH') or die('That\'s not how the Force works!');
+defined('ABSPATH') || exit('That\'s not how the Force works!');
 
 class Bootstrap implements Registerable
 {
@@ -19,17 +19,6 @@ class Bootstrap implements Registerable
      * @var AdminSubPage[]
      */
     protected $subPages = [];
-
-    public function load(): void
-    {
-        add_filter(
-            'wp_hyperdrive_services',
-            function ($services) {
-                $services[] = self::class;
-                return $services;
-            }
-        );
-    }
 
     public function register(): void
     {
